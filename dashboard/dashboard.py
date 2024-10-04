@@ -7,13 +7,13 @@ from babel.numbers import format_currency
 
 st.header('Bike Rentals Dashboard')
 
-days_df = pd.read_csv('days_df.csv')
-daily_rentals = pd.read_csv('daily_rentals.csv')
-monthly_data = pd.read_csv('monthly_data.csv')
-years_sum = pd.read_csv('years_sum.csv')
-yearly_counts = pd.read_csv('yearly_counts.csv')
-season_sum = pd.read_csv('season_sum.csv')
-season_contribution = pd.read_csv('season_contribution.csv')
+days_df = pd.read_csv('dashboard/days_df.csv')
+daily_rentals = pd.read_csv('dashboard/daily_rentals.csv')
+monthly_data = pd.read_csv('dashboard/monthly_data.csv')
+years_sum = pd.read_csv('dashboard/years_sum.csv')
+yearly_counts = pd.read_csv('dashboard/yearly_counts.csv')
+season_sum = pd.read_csv('dashboard/season_sum.csv')
+season_contribution = pd.read_csv('dashboard/season_contribution.csv')
 
 daily_rentals['dteday'] = pd.to_datetime(days_df['dteday'])
 daily_rentals.sort_values(by='dteday', inplace=True)
